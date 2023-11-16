@@ -398,7 +398,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2023-11-09
+                    2023-11-16
                 </div>
                 
 
@@ -422,25 +422,36 @@
         <hr class="clearfix">
 
         
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/dragon954/dragon954.github.io/libs/prism/prism.min.css">
+        
 
         
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="最简单的Java应用程序"><a href="#最简单的Java应用程序" class="headerlink" title="最简单的Java应用程序"></a>最简单的Java应用程序</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">public class FirstSample &#123;</span><br><span class="line">  public static void main(String[] args) &#123;</span><br><span class="line">    System.out.println(&quot;Hello world!&quot;);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+                <h2 id="最简单的Java应用程序"><a href="#最简单的Java应用程序" class="headerlink" title="最简单的Java应用程序"></a>最简单的Java应用程序</h2><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">FirstSample</span> <span class="token punctuation">&#123;</span>
+  <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Hello world!"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>执行该代码块会在屏幕上打印：Hello world!</p>
-<h2 id="Java的规范"><a href="#Java的规范" class="headerlink" title="Java的规范"></a>Java的规范</h2><ul>
+<h3 id="Java的规范"><a href="#Java的规范" class="headerlink" title="Java的规范"></a>Java的规范</h3><ul>
 <li>类名：大驼峰命名法（帕斯卡命名法），每个单词首字母大写,可与数字结合使用</li>
 <li>源代码的文件名：与公共类名字相同，以.java为扩展名。</li>
 <li>main方法：类型为public</li>
 </ul>
-<h1 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h1><ol>
+<h2 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h2><ol>
 <li>单行注释：&#x2F;&#x2F;代码</li>
 <li>多行注释：&#x2F;*代码块*&#x2F;</li>
-<li>文档注释：  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line"> *代码行1  </span><br><span class="line"> *代码行2  </span><br><span class="line"> *代码行3</span><br><span class="line"> */</span><br></pre></td></tr></table></figure></li>
+<li>文档注释：  <pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">/**
+ *代码行1  
+ *代码行2  
+ *代码行3
+ */</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
 </ol>
-<h1 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h1><p>java是一种强类型语言，必须为每个变量声明一种数据类型。</p>
-<h2 id="4种整型"><a href="#4种整型" class="headerlink" title="4种整型"></a>4种整型</h2><p>整型相当于整数，指没有小数部分的数值，可以为负数。不同整型的区别在于申请用来存储数据的空间大小不同。</p>
+<h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><p>java是一种强类型语言，必须为每个变量声明一种数据类型。</p>
+<h3 id="4种整型"><a href="#4种整型" class="headerlink" title="4种整型"></a>4种整型</h3><p>整型相当于整数，指没有小数部分的数值，可以为负数。不同整型的区别在于申请用来存储数据的空间大小不同。</p>
 <table>
 <thead>
 <tr>
@@ -495,7 +506,7 @@
 <td>p20</td>
 </tr>
 </tbody></table>
-<h2 id="2种浮点型"><a href="#2种浮点型" class="headerlink" title="2种浮点型"></a>2种浮点型</h2><p>表示有小数部分的数值。根据精度（小数位数）分为两种类型。</p>
+<h3 id="2种浮点型"><a href="#2种浮点型" class="headerlink" title="2种浮点型"></a>2种浮点型</h3><p>表示有小数部分的数值。根据精度（小数位数）分为两种类型。</p>
 <table>
 <thead>
 <tr>
@@ -515,7 +526,7 @@
 <td>大约有效位数6~7位</td>
 </tr>
 </tbody></table>
-<h2 id="字符类型"><a href="#字符类型" class="headerlink" title="字符类型"></a>字符类型</h2><p>字符类型char原本用来表示单个字符，现在有一些Unicode字符需要两个char值来表示。char类型的字面值需要用单引号括起来。char类型的值可以用十六进制表示，需要用\u作为前缀转义。</p>
+<h3 id="字符类型"><a href="#字符类型" class="headerlink" title="字符类型"></a>字符类型</h3><p>字符类型char原本用来表示单个字符，现在有一些Unicode字符需要两个char值来表示。char类型的字面值需要用单引号括起来。char类型的值可以用十六进制表示，需要用\u作为前缀转义。</p>
 <p>下面是特殊字符的转义序列</p>
 <table>
 <thead>
@@ -561,13 +572,22 @@
 <td>\u005c</td>
 </tr>
 </tbody></table>
-<h2 id="布尔类型"><a href="#布尔类型" class="headerlink" title="布尔类型"></a>布尔类型</h2><p>boolean类型有两个值：false和true，用来判定逻辑条件。整型和boolean之间不能相互转换。</p>
-<h1 id="变量与常量"><a href="#变量与常量" class="headerlink" title="变量与常量"></a>变量与常量</h1><h2 id="变量类型"><a href="#变量类型" class="headerlink" title="变量类型"></a>变量类型</h2><p>每个变量都有一个数据类型。声明时，类型位于变量名之前。<br>如int number<br>double number2<br>int[] numbers</p>
-<h2 id="变量初始化"><a href="#变量初始化" class="headerlink" title="变量初始化"></a>变量初始化</h2><p>初始化时用等号赋值，也可以在声明时就初始化。<br>number &#x3D; 1;<br>int number3 &#x3D; 2;</p>
-<h2 id="常量关键字"><a href="#常量关键字" class="headerlink" title="常量关键字"></a>常量关键字</h2><p>Java用关键字final指示常量，表示只能被赋值一次。习惯上常量名全大写。</p>
-<h2 id="类常量"><a href="#类常量" class="headerlink" title="类常量"></a>类常量</h2><p>使用static 在main方法外修饰常量，则该类的任何方法都可以使用这个常量。<br>使用public 修饰类常量，则其他类的方法也可以使用这个常量。</p>
-<h2 id="枚举类型"><a href="#枚举类型" class="headerlink" title="枚举类型"></a>枚举类型</h2><p>有时候，变量的取值只在一个有限的集合内。在变量中很可能保存的是一个错误的值。针对这种情况， 可以自定义枚举类型。枚举类型包括有限个命名的值。 如：<br>  enum Size{ SMALL, MEDIUM, LARGE, EXTRA.LARCE };<br>现在可以声明这种类型的变量：<br>  Size s &#x3D; Size.MEDIUM;<br>Size 类型的变量只能存储这个类型声明中给定的某个枚举值，或者 null 值，null 表示这个变量没有设置任何值。</p>
-<h1 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h1><h2 id="算术运算符"><a href="#算术运算符" class="headerlink" title="算术运算符"></a>算术运算符</h2><table>
+<h3 id="布尔类型"><a href="#布尔类型" class="headerlink" title="布尔类型"></a>布尔类型</h3><p>boolean类型有两个值：false和true，用来判定逻辑条件。整型和boolean之间不能相互转换。</p>
+<h2 id="变量与常量"><a href="#变量与常量" class="headerlink" title="变量与常量"></a>变量与常量</h2><h3 id="变量类型"><a href="#变量类型" class="headerlink" title="变量类型"></a>变量类型</h3><p>每个变量都有一个数据类型。声明时，类型位于变量名之前。</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">int</span> number
+<span class="token keyword">double</span> number2
+<span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> numbers<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<h3 id="变量初始化"><a href="#变量初始化" class="headerlink" title="变量初始化"></a>变量初始化</h3><p>初始化时用等号赋值，也可以在声明时就初始化。</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">number <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+<span class="token keyword">int</span> number3 <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<h3 id="常量关键字"><a href="#常量关键字" class="headerlink" title="常量关键字"></a>常量关键字</h3><p>Java用关键字final指示常量，表示只能被赋值一次。习惯上常量名全大写。</p>
+<h3 id="类常量"><a href="#类常量" class="headerlink" title="类常量"></a>类常量</h3><p>使用static 在main方法外修饰常量，则该类的任何方法都可以使用这个常量。<br>使用public 修饰类常量，则其他类的方法也可以使用这个常量。</p>
+<h3 id="枚举类型"><a href="#枚举类型" class="headerlink" title="枚举类型"></a>枚举类型</h3><p>有时候，变量的取值只在一个有限的集合内。在变量中很可能保存的是一个错误的值。针对这种情况， 可以自定义枚举类型。枚举类型包括有限个命名的值。 如：</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">enum</span> <span class="token class-name">Size</span><span class="token punctuation">&#123;</span> <span class="token constant">SMALL</span><span class="token punctuation">,</span> <span class="token constant">MEDIUM</span><span class="token punctuation">,</span> <span class="token constant">LARGE</span><span class="token punctuation">,</span> <span class="token constant">EXTRA</span><span class="token punctuation">.</span><span class="token constant">LARCE</span> <span class="token punctuation">&#125;</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>现在可以声明这种类型的变量：</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token class-name">Size</span> s <span class="token operator">=</span> <span class="token class-name">Size</span><span class="token punctuation">.</span><span class="token constant">MEDIUM</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>Size 类型的变量只能存储这个类型声明中给定的某个枚举值，或者 null 值，null 表示这个变量没有设置任何值。</p>
+<h2 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h2><h3 id="算术运算符"><a href="#算术运算符" class="headerlink" title="算术运算符"></a>算术运算符</h3><table>
 <thead>
 <tr>
 <th>符号</th>
@@ -601,20 +621,20 @@
 <td></td>
 </tr>
 </tbody></table>
-<h2 id="结合赋值和运算符"><a href="#结合赋值和运算符" class="headerlink" title="结合赋值和运算符"></a>结合赋值和运算符</h2><p>可以在赋值中使用二元运算符，这是一种很方便的简写形式。<br>x +&#x3D; 4 等价于 x &#x3D; x + 4。<br>注意这是右结合，也就是说，右边的会先算，如<br>a +&#x3D; b +&#x3D; c 等价于 a &#x3D; a + (b + c)</p>
-<h2 id="自增自减运算符"><a href="#自增自减运算符" class="headerlink" title="自增自减运算符"></a>自增自减运算符</h2><p>n++ 等价于 n +&#x3D; 1<br>n– 等价于 n -&#x3D; 1</p>
-<h2 id="关系运算符"><a href="#关系运算符" class="headerlink" title="关系运算符"></a>关系运算符</h2><p>&#x3D;&#x3D; 检测数值是否相等，相等返回true<br>!&#x3D; 检查数值是否不相等,不相等返回true<br>&gt;、&lt;、&gt;&#x3D;、&lt;&#x3D;同理</p>
-<h2 id="逻辑运算符"><a href="#逻辑运算符" class="headerlink" title="逻辑运算符"></a>逻辑运算符</h2><p>逻辑运算符是短路设计，只要第一个关系运算可以确定表达式的值，就不判断第二个关系运算的结果。<br>&amp;&amp;、||、！</p>
-<h2 id="三元运算符"><a href="#三元运算符" class="headerlink" title="三元运算符"></a>三元运算符</h2><p>condition ? expression1 : expression2<br>条件为真则返回expression1的值，否则返回expression2的值。<br>x &lt; y ? y - x : x - y; &#x2F;&#x2F;返回x与y的差的绝对值。</p>
-<h2 id="位运算符"><a href="#位运算符" class="headerlink" title="位运算符"></a>位运算符</h2><p>了解位运算需要先了解机器码与真值、原码反码与补码</p>
-<h3 id="机器码与真值"><a href="#机器码与真值" class="headerlink" title="机器码与真值"></a>机器码与真值</h3><h3 id="原码、反码、补码"><a href="#原码、反码、补码" class="headerlink" title="原码、反码、补码"></a>原码、反码、补码</h3><h3 id="位运算"><a href="#位运算" class="headerlink" title="位运算"></a>位运算</h3><p>处理整型类型时，可以直接对组成整型数值的各个位完成操作。位运算符包括：<br>&amp; (“and”)<br>| (“or”)<br>^ (“XOr”)<br>~ (“not”)</p>
-<h2 id="移位运算符"><a href="#移位运算符" class="headerlink" title="移位运算符"></a>移位运算符</h2><ul>
+<h3 id="结合赋值和运算符"><a href="#结合赋值和运算符" class="headerlink" title="结合赋值和运算符"></a>结合赋值和运算符</h3><p>可以在赋值中使用二元运算符，这是一种很方便的简写形式。<br>x +&#x3D; 4 等价于 x &#x3D; x + 4。<br>注意这是右结合，也就是说，右边的会先算，如<br>a +&#x3D; b +&#x3D; c 等价于 a &#x3D; a + (b + c)</p>
+<h3 id="自增自减运算符"><a href="#自增自减运算符" class="headerlink" title="自增自减运算符"></a>自增自减运算符</h3><p>n++ 等价于 n +&#x3D; 1<br>n– 等价于 n -&#x3D; 1</p>
+<h3 id="关系运算符"><a href="#关系运算符" class="headerlink" title="关系运算符"></a>关系运算符</h3><p>&#x3D;&#x3D; 检测数值是否相等，相等返回true<br>!&#x3D; 检查数值是否不相等,不相等返回true<br>&gt;、&lt;、&gt;&#x3D;、&lt;&#x3D;同理</p>
+<h3 id="逻辑运算符"><a href="#逻辑运算符" class="headerlink" title="逻辑运算符"></a>逻辑运算符</h3><p>逻辑运算符是短路设计，只要第一个关系运算可以确定表达式的值，就不判断第二个关系运算的结果。<br>&amp;&amp;、||、！</p>
+<h3 id="三元运算符"><a href="#三元运算符" class="headerlink" title="三元运算符"></a>三元运算符</h3><p>condition ? expression1 : expression2<br>条件为真则返回expression1的值，否则返回expression2的值。<br>x &lt; y ? y - x : x - y; &#x2F;&#x2F;返回x与y的差的绝对值。</p>
+<h3 id="位运算符"><a href="#位运算符" class="headerlink" title="位运算符"></a>位运算符</h3><p>了解位运算需要先了解机器码与真值、原码反码与补码</p>
+<h4 id="机器码与真值"><a href="#机器码与真值" class="headerlink" title="机器码与真值"></a>机器码与真值</h4><h4 id="原码、反码、补码"><a href="#原码、反码、补码" class="headerlink" title="原码、反码、补码"></a>原码、反码、补码</h4><h4 id="位运算"><a href="#位运算" class="headerlink" title="位运算"></a>位运算</h4><p>处理整型类型时，可以直接对组成整型数值的各个位完成操作。位运算符包括：<br>&amp; (“and”)<br>| (“or”)<br>^ (“XOr”)<br>~ (“not”)</p>
+<h3 id="移位运算符"><a href="#移位运算符" class="headerlink" title="移位运算符"></a>移位运算符</h3><ul>
 <li>&gt;&gt;</li>
 <li>&lt;&lt;</li>
 <li>&gt;&gt;&gt;</li>
 <li>&lt;&lt;&lt;</li>
 </ul>
-<h2 id="数字函数与常量"><a href="#数字函数与常量" class="headerlink" title="数字函数与常量"></a>数字函数与常量</h2><p>通常调用数字函数和常量需要前缀”Math.”，但是只要在源文件静态导入就不用了。代码如下<br>  import static java.lang.Math.*;</p>
+<h3 id="数字函数与常量"><a href="#数字函数与常量" class="headerlink" title="数字函数与常量"></a>数字函数与常量</h3><p>通常调用数字函数和常量需要前缀”Math.”，但是只要在源文件静态导入就不用了。代码如下<br>  import static java.lang.Math.*;</p>
 <table>
 <thead>
 <tr>
@@ -685,7 +705,7 @@
 </tr>
 </tbody></table>
 <p>两个表示派和e常量的近似值：<br>PI、E</p>
-<h2 id="数值类型之间的转换"><a href="#数值类型之间的转换" class="headerlink" title="数值类型之间的转换"></a>数值类型之间的转换</h2><p>经常需要将一种数值类型转换为另一种数值类型。下面介绍合法的转换及其精度损失情况。<br>占据空间小的数值类型转化为大的不损失精度：<br>byte-&gt;short-&gt;int-&gt;long<br>char-&gt;int<br>int-&gt;double<br>float-&gt;double<br>否则损失精度：<br>int-&gt;float<br>long-&gt;float<br>long-&gt;double</p>
+<h3 id="数值类型之间的转换"><a href="#数值类型之间的转换" class="headerlink" title="数值类型之间的转换"></a>数值类型之间的转换</h3><p>经常需要将一种数值类型转换为另一种数值类型。下面介绍合法的转换及其精度损失情况。<br>占据空间小的数值类型转化为大的不损失精度：<br>byte-&gt;short-&gt;int-&gt;long<br>char-&gt;int<br>int-&gt;double<br>float-&gt;double<br>否则损失精度：<br>int-&gt;float<br>long-&gt;float<br>long-&gt;double</p>
 <p>二元计算经常会发生数值类型转换</p>
 <ul>
 <li>如果两个操作数中有一个是 double 类型， 另一个操作数就会转换为 double 类型。</li>
@@ -693,38 +713,88 @@
 <li>否则， 如果其中一个操作数是 long 类型， 另一个操作数将会转换为 long 类型。</li>
 <li>否则， 两个操作数都将被转换为 int 类型。</li>
 </ul>
-<h2 id="强制类型转换"><a href="#强制类型转换" class="headerlink" title="强制类型转换"></a>强制类型转换</h2><p>在计算时接受精度损失可以进行cast(强制类型转换)，用法如下：<br>double x &#x3D; 9.997;<br>int nx &#x3D; (int)x;<br>这样子nx的值就是整数部分的9。如果想四舍五入则先用Math.round()方法，由于该方法的返回值类型是long，long转为int是不合法的，因此仍然需要强制类型转换。<br>int nx &#x3D; (int)Math.round(x);</p>
-<h1 id="大数"><a href="#大数" class="headerlink" title="大数"></a>大数</h1><p>如果基本的整数和浮点数精度不能够满足需求， 那么可以使用java.math 包中的两个类：Biglnteger 和 BigDecimaL 这两个类可以处理包含任意长度数字序列的数值。</p>
-<h2 id="BigInteger、BigDecimal的作用"><a href="#BigInteger、BigDecimal的作用" class="headerlink" title="BigInteger、BigDecimal的作用"></a>BigInteger、BigDecimal的作用</h2><p>Biglnteger 类实现了任意精度的整数运算， BigDecimal 实现了任意精度的浮点数运算。</p>
-<h2 id="BigInteger、BigDecimal的用法"><a href="#BigInteger、BigDecimal的用法" class="headerlink" title="BigInteger、BigDecimal的用法"></a>BigInteger、BigDecimal的用法</h2><p>使用静态的 valueOf方法可以将普通的数值转换为大数值。<br>  BigInteger a &#x3D; BigInteger.valueOf(100);<br>处理大数值需要使用大数值类中的 add 和 multiply 方法。<br>  BigInteger c &#x3D; a.add(b);&#x2F;&#x2F;c &#x3D; a + b<br>  BigInteger d &#x3D; c.multiply(b.add(BigInteger.valueOf(2)));&#x2F;&#x2F;d &#x3D; c * (b + 2)</p>
-<h1 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h1><p>数组是一种数据结构， 用来存储同一类型值的集合。通过一个整型下标可以访问数组中的每一个值。</p>
-<h2 id="数组声明"><a href="#数组声明" class="headerlink" title="数组声明"></a>数组声明</h2><p>int[] a &#x3D; new int[number];&#x2F;&#x2F;不要求number是常量</p>
-<h2 id="数组初始化"><a href="#数组初始化" class="headerlink" title="数组初始化"></a>数组初始化</h2><ul>
+<h3 id="强制类型转换"><a href="#强制类型转换" class="headerlink" title="强制类型转换"></a>强制类型转换</h3><p>在计算时接受精度损失可以进行cast(强制类型转换)，用法如下：</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">double</span> x <span class="token operator">=</span> <span class="token number">9.997</span><span class="token punctuation">;</span>
+<span class="token keyword">int</span> nx <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span>x<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>这样子nx的值就是整数部分的9。如果想四舍五入则先用Math.round()方法，由于该方法的返回值类型是long，long转为int是不合法的，因此仍然需要强制类型转换。</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">int</span> nx <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span><span class="token class-name">Math</span><span class="token punctuation">.</span><span class="token function">round</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h2 id="大数"><a href="#大数" class="headerlink" title="大数"></a>大数</h2><p>如果基本的整数和浮点数精度不能够满足需求， 那么可以使用java.math 包中的两个类：Biglnteger 和 BigDecimaL 这两个类可以处理包含任意长度数字序列的数值。</p>
+<h3 id="BigInteger、BigDecimal的作用"><a href="#BigInteger、BigDecimal的作用" class="headerlink" title="BigInteger、BigDecimal的作用"></a>BigInteger、BigDecimal的作用</h3><p>Biglnteger 类实现了任意精度的整数运算， BigDecimal 实现了任意精度的浮点数运算。</p>
+<h3 id="BigInteger、BigDecimal的用法"><a href="#BigInteger、BigDecimal的用法" class="headerlink" title="BigInteger、BigDecimal的用法"></a>BigInteger、BigDecimal的用法</h3><p>使用静态的 valueOf方法可以将普通的数值转换为大数值。</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token class-name">BigInteger</span> a <span class="token operator">=</span> <span class="token class-name">BigInteger</span><span class="token punctuation">.</span><span class="token function">valueOf</span><span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>处理大数值需要使用大数值类中的 add 和 multiply 方法。</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token class-name">BigInteger</span> c <span class="token operator">=</span> a<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>b<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//c = a + b</span>
+<span class="token class-name">BigInteger</span> d <span class="token operator">=</span> c<span class="token punctuation">.</span><span class="token function">multiply</span><span class="token punctuation">(</span>b<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token class-name">BigInteger</span><span class="token punctuation">.</span><span class="token function">valueOf</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//d = c * (b + 2)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<h2 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h2><p>数组是一种数据结构， 用来存储同一类型值的集合。通过一个整型下标可以访问数组中的每一个值。</p>
+<h3 id="数组声明"><a href="#数组声明" class="headerlink" title="数组声明"></a>数组声明</h3><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> a <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token keyword">int</span><span class="token punctuation">[</span>number<span class="token punctuation">]</span><span class="token punctuation">;</span><span class="token comment">//不要求number是常量</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h3 id="数组初始化"><a href="#数组初始化" class="headerlink" title="数组初始化"></a>数组初始化</h3><ul>
 <li>默认初始化：数字数组所有元素初始化为0，boolean数值初始化为false，对象数组初始化为null。</li>
-<li>人为初始化：可在声明时初始化，如：int[] smallPrimes &#x3D; {2, 3, 5, 7}</li>
-<li>初始化匿名数组：new int[] {17, 19, 23, 29}</li>
+<li>人为初始化：可在声明时初始化，如：<code>int[] smallPrimes = &#123;2, 3, 5, 7&#125;</code></li>
+<li>初始化匿名数组：<code>new int[] &#123;17, 19, 23, 29&#125;</code></li>
 </ul>
-<h2 id="数组拷贝"><a href="#数组拷贝" class="headerlink" title="数组拷贝"></a>数组拷贝</h2><ul>
+<h3 id="数组拷贝"><a href="#数组拷贝" class="headerlink" title="数组拷贝"></a>数组拷贝</h3><ul>
 <li>引用拷贝：使用等号，两个变量引用同一个数组</li>
 <li>值拷贝：Arrays.copyOf(原数组，新数组的长度)</li>
 </ul>
-<h2 id="命令行参数"><a href="#命令行参数" class="headerlink" title="命令行参数"></a>命令行参数</h2><p>public static void main(String[] args) {}<br>运行类等价于运行main方法，因此在命令行运行时可以给args赋值，如<br>java 类名 参数一的值 参数二的 参数三</p>
-<h2 id="数组排序"><a href="#数组排序" class="headerlink" title="数组排序"></a>数组排序</h2><p>对数值型数组进行排序， 可以使用 Arrays 类中的 sort 方法：<br>  int[] a &#x3D; new int[10000];<br>  Arrays.sort(a)</p>
-<h2 id="多维数组"><a href="#多维数组" class="headerlink" title="多维数组"></a>多维数组</h2><p>多维数组将使用多个下标访问数组元素， 它适用于表示表格或更加复杂的排列形式。其本质是一维数组的元素是一维数组。</p>
-<p>声明<br>  double[][] balances;<br>初始化<br>  balances &#x3D; new double[][];<br>遍历<br>  for (double[] row: balances) {<br>  &#x2F;&#x2F;print table row<br>    for (double b: row)<br>      &#x2F;&#x2F; %10.2指将浮点数从左往右占10个位，其中小数点后占两位，不够则后面用空格占位<br>      &#x2F;&#x2F; 打印数组要用printf方法，而不是println<br>      System.out.printf(“%10.2f”,b);<br>  }</p>
-<h1 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h1><p>事实上，Java字符串就是Unicode字符序列。Java没有内置的字符串类型，而是在标准Java类库中提供了一个预定义类String。每个用双引号括起来的字符串都是该类的一个实例。</p>
-<h2 id="长度——码点与代码单元"><a href="#长度——码点与代码单元" class="headerlink" title="长度——码点与代码单元"></a>长度——码点与代码单元</h2><p>Java 字符串由 char 值序列组成,length()将返回采用 UTF-16 编码表示的给定字符串所需要的代码单元数量。<br>  String greeting &#x3D; “Hello”;<br>  int n &#x3D; greeting.length(); &#x2F;&#x2F;is 5<br>要想得到实际长度(字符个数)，即码点数量：<br>  int cpCount &#x3D; greeting.codePointCount(0, greeting.length());<br>一般（不含辅助字符时）代码单元数量与码点数量相同。</p>
-<h2 id="空串与Null串"><a href="#空串与Null串" class="headerlink" title="空串与Null串"></a>空串与Null串</h2><p>空串是一个字符串对象，长度为0，内容为空，而null是一个特殊的值，表示没有对象与该变量关联。检查一个字符串是否为空可以用：<br>  if(str.length() &#x3D;&#x3D; 0)<br>或<br>  if(str.equals(“”))<br>想判断一个字符串变量不为空也不为null：<br>  if(str !&#x3D; null &amp;&amp; str.length() !&#x3D; 0)</p>
-<h2 id="截取"><a href="#截取" class="headerlink" title="截取"></a>截取</h2><p>String类的substring方法可以从一个较大的字符串中提取出一个子串<br>  String greeting &#x3D; “Hello”;<br>  String s &#x3D; greeting.substring(0,3);<br>创建了一个由字符串”Hel”组成的字符串。显然，从0开始计数，直到3前面为止，是左开右闭区间。</p>
-<h2 id="拼接"><a href="#拼接" class="headerlink" title="拼接"></a>拼接</h2><h3 id="号拼接字符串"><a href="#号拼接字符串" class="headerlink" title="+号拼接字符串"></a>+号拼接字符串</h3><p>Java允许用’+’拼接两个字符串。<br>  String expletive &#x3D; “Expletive”;<br>  String PG13 &#x3D; “deleted”;<br>  String message &#x3D; expletive + PG13;<br>message的值为:Expletivedeleted。这种拼接通常发生在输出语句，如：<br>  System.out.println(“This answer is “ + answer);</p>
-<h3 id="join方法拼接字符串"><a href="#join方法拼接字符串" class="headerlink" title="join方法拼接字符串"></a>join方法拼接字符串</h3><p>如果需要把多个字符串放在一起， 用一个定界符分隔，可以使用静态 join 方法：<br>  String all &#x3D; String.join(“ &#x2F; “, “S”, “M”, “L”, “XL”);<br>all的值为：S &#x2F; M &#x2F; L &#x2F; XL</p>
-<h2 id="检测字符串是否相等"><a href="#检测字符串是否相等" class="headerlink" title="检测字符串是否相等"></a>检测字符串是否相等</h2><p>检测字符串是否每个字符都相等采用equals()方法，返回true或false。该方法的比较对象可以是字符串变量，也可以是字符串常量。如：<br>  a.euqals(b);<br>  “Hello”.equals(greeting);<br>检测字符串相等时想忽略大小写可用equalsIgnoreCase()方法。<br>强烈建议不用&#x3D;&#x3D;检测两个字符串是否相等！该运算符只能确定两个字符串是否是同一个字符串对象&#x2F;字符串常量。<br>  String greeting &#x3D; “Hello”;<br>  if(gretting.substring(0,3) &#x3D;&#x3D; “Hel”)<br>  &#x2F;&#x2F;probably false</p>
-<h2 id="修改字符串"><a href="#修改字符串" class="headerlink" title="修改字符串"></a>修改字符串</h2><p>String 类没有提供用于修改字符串的方法。如果想修改字符串，需要提取要的字符串，再拼接上替换的字符串：<br>  String greeting &#x3D; “Hello”;<br>  &#x2F;&#x2F;想把Hello变成Help!<br>  greeting &#x3D; greeting.substring(0,3) + “p!”;<br>由于String不能修改，因此在Java文档里将String类对象称为不可变字符串，字符串“ Hello” 永远包含字符 H、 e、1、 1 和 o 的代码单元序列， 而不能修改其中的任何一个字符。当然，可以修改字符串变量，让它引用另一个字符串。</p>
-<h2 id="可变字符串"><a href="#可变字符串" class="headerlink" title="可变字符串"></a>可变字符串</h2><p>有时需要由较短的字符串构建字符串，如按键或来自文件中的单词，但每次连接字符串都会重新构建一个新的String对象，既耗时又浪费空间，使用可变字符串StringBuilder类可避免这个问题。<br>  StringBuilder builder &#x3D; new StringBuilder();<br>  builder.append(ch); &#x2F;&#x2F;为builder变量添加字符串ch<br>  builder.append(str); &#x2F;&#x2F;在ch后面添加str<br>  String completedString &#x3D; builder.toString(); &#x2F;&#x2F;利用StringBuilder对象得到同字符序列的String对象</p>
-<h1 id="输入输出"><a href="#输入输出" class="headerlink" title="输入输出"></a>输入输出</h1><p>用于输入输出的类是Scanner类，源代码在java.util包中，需要在文件开头使用关键字import加载包。<br>  import java.util.*;</p>
-<h2 id="键盘输入"><a href="#键盘输入" class="headerlink" title="键盘输入"></a>键盘输入</h2><p>首先构造Scanner对象，并与“标准输入流”System.in关联：<br>  Scanner in &#x3D; new Scanner(System.in);<br>接着调用实例Scanner类的方法实现输入：<br>  System.out.print(“What is your name?”);<br>  int age &#x3D; in.nextInt(); &#x2F;&#x2F;从键盘读取一个整数<br>  String firstName &#x3D; in.next(); &#x2F;&#x2F;读取一个单词（以空白作为分隔符）<br>  String name &#x3D; in.nextline(); &#x2F;&#x2F;读取一行</p>
-<h2 id="控制台格式化输出"><a href="#控制台格式化输出" class="headerlink" title="控制台格式化输出"></a>控制台格式化输出</h2><p>Java SE 5.0沿用了C语言库函数中的printf方法：<br>  System.out.printf(“%8.2f”, x);<br>用8个字符的宽度和小数点后两位字符的精度打印x。也就是说，打印输出一个空格和7个字符:<br> 3333.33<br>在printf中，可以使用多个参数，例如：<br>  System.out.printf(“Hello,%s. Next year, you’ll be %d”, name,age);<br>每一个以%字符开始的格式说明符都用相应的参数替换。格式说明符尾部的转换符将告诉计算机被格式化的数值类型：f 表示浮点数，s 表示字符串，d 表示十进制整数。</p>
-<h2 id="控制格式化输出的标志"><a href="#控制格式化输出的标志" class="headerlink" title="控制格式化输出的标志"></a>控制格式化输出的标志</h2><p>标志可以控制格式化输出。如，逗号标志增加了分隔符：<br>  System.out.printf(“%,.2f”, 1000 &#x2F; 3.0);<br>打印<br> 3,333.33<br>可以使用多个标志，如，”%,(.3f” 使用分组的分隔符并将负数扩在括号内。</p>
+<h3 id="命令行参数"><a href="#命令行参数" class="headerlink" title="命令行参数"></a>命令行参数</h3><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>运行类等价于运行main方法，因此在命令行运行时可以给args赋值，如<br>java 类名 参数一的值 参数二的 参数三</p>
+<h3 id="数组排序"><a href="#数组排序" class="headerlink" title="数组排序"></a>数组排序</h3><p>对数值型数组进行排序， 可以使用 Arrays 类中的 sort 方法：</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> a <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token number">10000</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token class-name">Arrays</span><span class="token punctuation">.</span><span class="token function">sort</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<h3 id="多维数组"><a href="#多维数组" class="headerlink" title="多维数组"></a>多维数组</h3><p>多维数组将使用多个下标访问数组元素， 它适用于表示表格或更加复杂的排列形式。其本质是一维数组的元素是一维数组。</p>
+<p>声明<br>  <code>double[][] balances;</code><br>初始化<br>  <code>balances = new double[][];</code><br>遍历</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">double</span><span class="token punctuation">[</span><span class="token punctuation">]</span> row<span class="token operator">:</span> balances<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  <span class="token comment">//print table row</span>
+  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">double</span> b<span class="token operator">:</span> row<span class="token punctuation">)</span>
+  <span class="token comment">// %10.2指将浮点数从左往右占10个位，其中小数点后占两位，不够则后面用空格占位 </span>
+  <span class="token comment">// 打印数组要用printf方法，而不是println</span>
+    <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%10.2f"</span><span class="token punctuation">,</span>b<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h2><p>事实上，Java字符串就是Unicode字符序列。Java没有内置的字符串类型，而是在标准Java类库中提供了一个预定义类String。每个用双引号括起来的字符串都是该类的一个实例。</p>
+<h3 id="长度——码点与代码单元"><a href="#长度——码点与代码单元" class="headerlink" title="长度——码点与代码单元"></a>长度——码点与代码单元</h3><p>Java 字符串由 char 值序列组成,length()将返回采用 UTF-16 编码表示的给定字符串所需要的代码单元数量。</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token class-name">String</span> greeting <span class="token operator">=</span> <span class="token string">"Hello"</span><span class="token punctuation">;</span>
+<span class="token keyword">int</span> n <span class="token operator">=</span> greeting<span class="token punctuation">.</span><span class="token function">length</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//is 5</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>要想得到实际长度(字符个数)，即码点数量：</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">int</span> cpCount <span class="token operator">=</span> greeting<span class="token punctuation">.</span><span class="token function">codePointCount</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> greeting<span class="token punctuation">.</span><span class="token function">length</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>一般（不含辅助字符时）代码单元数量与码点数量相同。</p>
+<h3 id="空串与Null串"><a href="#空串与Null串" class="headerlink" title="空串与Null串"></a>空串与Null串</h3><p>空串是一个字符串对象，长度为0，内容为空，而null是一个特殊的值，表示没有对象与该变量关联。检查一个字符串是否为空可以用：<br><code>if(str.length() == 0)</code><br>或<br><code>if(str.equals(&quot;&quot;))</code><br>想判断一个字符串变量不为空也不为null：<br><code>if(str != null &amp;&amp; str.length() != 0)</code></p>
+<h3 id="截取"><a href="#截取" class="headerlink" title="截取"></a>截取</h3><p>String类的substring方法可以从一个较大的字符串中提取出一个子串</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token class-name">String</span> greeting <span class="token operator">=</span> <span class="token string">"Hello"</span><span class="token punctuation">;</span>
+<span class="token class-name">String</span> s <span class="token operator">=</span> greeting<span class="token punctuation">.</span><span class="token function">substring</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>创建了一个由字符串”Hel”组成的字符串。显然，从0开始计数，直到3前面为止，是左开右闭区间。</p>
+<h3 id="拼接"><a href="#拼接" class="headerlink" title="拼接"></a>拼接</h3><h4 id="号拼接字符串"><a href="#号拼接字符串" class="headerlink" title="+号拼接字符串"></a>+号拼接字符串</h4><p>Java允许用’+’拼接两个字符串。</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token class-name">String</span> expletive <span class="token operator">=</span> <span class="token string">"Expletive"</span><span class="token punctuation">;</span>
+<span class="token class-name">String</span> <span class="token constant">PG13</span> <span class="token operator">=</span> <span class="token string">"deleted"</span><span class="token punctuation">;</span>
+<span class="token class-name">String</span> message <span class="token operator">=</span> expletive <span class="token operator">+</span> <span class="token constant">PG13</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>message的值为:Expletivedeleted。这种拼接通常发生在输出语句，如：<br><code>System.out.println(&quot;This answer is &quot; + answer);</code></p>
+<h4 id="join方法拼接字符串"><a href="#join方法拼接字符串" class="headerlink" title="join方法拼接字符串"></a>join方法拼接字符串</h4><p>如果需要把多个字符串放在一起， 用一个定界符分隔，可以使用静态 join 方法：<br><code>String all = String.join(&quot; / &quot;, &quot;S&quot;, &quot;M&quot;, &quot;L&quot;, &quot;XL&quot;);</code><br>all的值为：S &#x2F; M &#x2F; L &#x2F; XL</p>
+<h3 id="检测字符串是否相等"><a href="#检测字符串是否相等" class="headerlink" title="检测字符串是否相等"></a>检测字符串是否相等</h3><p>检测字符串是否每个字符都相等采用equals()方法，返回true或false。该方法的比较对象可以是字符串变量，也可以是字符串常量。如：</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">a<span class="token punctuation">.</span><span class="token function">euqals</span><span class="token punctuation">(</span>b<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token string">"Hello"</span><span class="token punctuation">.</span><span class="token function">equals</span><span class="token punctuation">(</span>greeting<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>检测字符串相等时想忽略大小写可用equalsIgnoreCase()方法。<br>强烈建议不用&#x3D;&#x3D;检测两个字符串是否相等！该运算符只能确定两个字符串是否是同一个字符串对象&#x2F;字符串常量。</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token class-name">String</span> greeting <span class="token operator">=</span> <span class="token string">"Hello"</span><span class="token punctuation">;</span>
+<span class="token keyword">if</span><span class="token punctuation">(</span>gretting<span class="token punctuation">.</span><span class="token function">substring</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token string">"Hel"</span><span class="token punctuation">)</span>
+<span class="token comment">//probably false</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<h3 id="修改字符串"><a href="#修改字符串" class="headerlink" title="修改字符串"></a>修改字符串</h3><p>String 类没有提供用于修改字符串的方法。如果想修改字符串，需要提取要的字符串，再拼接上替换的字符串：</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token class-name">String</span> greeting <span class="token operator">=</span> <span class="token string">"Hello"</span><span class="token punctuation">;</span>
+<span class="token comment">//想把Hello变成Help!</span>
+greeting <span class="token operator">=</span> greeting<span class="token punctuation">.</span><span class="token function">substring</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">"p!"</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>由于String不能修改，因此在Java文档里将String类对象称为不可变字符串，字符串“ Hello” 永远包含字符 H、 e、1、 1 和 o 的代码单元序列， 而不能修改其中的任何一个字符。当然，可以修改字符串变量，让它引用另一个字符串。</p>
+<h3 id="可变字符串"><a href="#可变字符串" class="headerlink" title="可变字符串"></a>可变字符串</h3><p>有时需要由较短的字符串构建字符串，如按键或来自文件中的单词，但每次连接字符串都会重新构建一个新的String对象，既耗时又浪费空间，使用可变字符串StringBuilder类可避免这个问题。</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token class-name">StringBuilder</span> builder <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">StringBuilder</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+builder<span class="token punctuation">.</span><span class="token function">append</span><span class="token punctuation">(</span>ch<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//为builder变量添加字符串ch</span>
+builder<span class="token punctuation">.</span><span class="token function">append</span><span class="token punctuation">(</span>str<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//在ch后面添加str</span>
+<span class="token class-name">String</span> completedString <span class="token operator">=</span> builder<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//利用StringBuilder对象得到同字符序列的String对象</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="输入输出"><a href="#输入输出" class="headerlink" title="输入输出"></a>输入输出</h2><p>用于输入输出的类是Scanner类，源代码在java.util包中，需要在文件开头使用关键字import加载包。<br><code>import java.util.*;</code></p>
+<h3 id="键盘输入"><a href="#键盘输入" class="headerlink" title="键盘输入"></a>键盘输入</h3><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">//首先构造Scanner对象，并与“标准输入流”System.in关联：</span>
+<span class="token class-name">Scanner</span> in <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Scanner</span><span class="token punctuation">(</span><span class="token class-name">System</span><span class="token punctuation">.</span>in<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">//接着调用实例Scanner类的方法实现输入：</span>
+<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"What is your name?"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">int</span> age <span class="token operator">=</span> in<span class="token punctuation">.</span><span class="token function">nextInt</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//从键盘读取一个整数</span>
+<span class="token class-name">String</span> firstName <span class="token operator">=</span> in<span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//读取一个单词（以空白作为分隔符）</span>
+<span class="token class-name">String</span> name <span class="token operator">=</span> in<span class="token punctuation">.</span><span class="token function">nextline</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//读取一行</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="控制台格式化输出"><a href="#控制台格式化输出" class="headerlink" title="控制台格式化输出"></a>控制台格式化输出</h3><p>Java SE 5.0沿用了C语言库函数中的printf方法：<br><code>System.out.printf(&quot;%8.2f&quot;, x);</code><br>用8个字符的宽度和小数点后两位字符的精度打印x。也就是说，打印输出一个空格和7个字符:<br><code>(一个空格)3333.33</code><br>在printf中，可以使用多个参数，例如：<br><code>System.out.printf(&quot;Hello,%s. Next year, you&#39;ll be %d&quot;, name,age);</code><br>每一个以%字符开始的格式说明符都用相应的参数替换。格式说明符尾部的转换符将告诉计算机被格式化的数值类型：f 表示浮点数，s 表示字符串，d 表示十进制整数。</p>
+<h3 id="控制格式化输出的标志"><a href="#控制格式化输出的标志" class="headerlink" title="控制格式化输出的标志"></a>控制格式化输出的标志</h3><p>标志可以控制格式化输出。如，逗号标志增加了分隔符：<br><code>System.out.printf(&quot;%,.2f&quot;, 1000 / 3.0);</code><br>打印<br><code>3,333.33</code><br>可以使用多个标志，如，”%,(.3f” 使用分组的分隔符并将负数扩在括号内。</p>
 <table>
 <thead>
 <tr>
@@ -794,21 +864,70 @@
 <td></td>
 </tr>
 </tbody></table>
-<h2 id="文件输入与输出"><a href="#文件输入与输出" class="headerlink" title="文件输入与输出"></a>文件输入与输出</h2><h3 id="读取文件——文件输入"><a href="#读取文件——文件输入" class="headerlink" title="读取文件——文件输入"></a>读取文件——文件输入</h3><p>构建该文件的Scanner对象，如果文件名包含反斜杠，则需要再加一个反斜杠转义。<br>  Scanner in &#x3D; new Scanner(Paths.get(“myfile.txt”,”UTF-8”));</p>
-<h3 id="写入文件——文件输出"><a href="#写入文件——文件输出" class="headerlink" title="写入文件——文件输出"></a>写入文件——文件输出</h3><p>构造PrintWriter对象。如果文件不存在则创建该文件。<br>  PrintWriter out &#x3D; new PrintWriter(“mynewfile.txt”,”UTF-8”);</p>
-<h1 id="控制流程"><a href="#控制流程" class="headerlink" title="控制流程"></a>控制流程</h1><h2 id="块作用域"><a href="#块作用域" class="headerlink" title="块作用域"></a>块作用域</h2><p>块，即复合语句。是指由一对大括号括起来的若干条简单的Java语句。块确定了变量的作用域。一个块可以嵌套在另一个块中，不能在嵌套的两个块中声明同名的变量。</p>
-<h2 id="分支语句——条件语句"><a href="#分支语句——条件语句" class="headerlink" title="分支语句——条件语句"></a>分支语句——条件语句</h2><h3 id="if语句"><a href="#if语句" class="headerlink" title="if语句"></a>if语句</h3><p>  if(condition) {<br>    statement1；<br>    statement2；<br>    …<br>  } else if(condition2) {<br>    statement3;<br>    statement4;<br>    …<br>  } else {<br>    statement5;<br>  }</p>
-<h2 id="switch语句"><a href="#switch语句" class="headerlink" title="switch语句"></a>switch语句</h2><p>  switch (choice) {<br>    case 1: {<br>      statement1；<br>      statement2；<br>      …<br>      break;<br>    }<br>    case 2: {<br>      statement1；<br>      statement2；<br>      …<br>      break;<br>    }<br>    …<br>    default: {<br>      statement1；<br>      statement2；<br>      …<br>      break;<br>    }<br>  }<br>case标签可以是：</p>
+<h3 id="文件输入与输出"><a href="#文件输入与输出" class="headerlink" title="文件输入与输出"></a>文件输入与输出</h3><h4 id="读取文件——文件输入"><a href="#读取文件——文件输入" class="headerlink" title="读取文件——文件输入"></a>读取文件——文件输入</h4><p>构建该文件的Scanner对象，如果文件名包含反斜杠，则需要再加一个反斜杠转义。<br><code>Scanner in = new Scanner(Paths.get(&quot;myfile.txt&quot;,&quot;UTF-8&quot;));</code></p>
+<h4 id="写入文件——文件输出"><a href="#写入文件——文件输出" class="headerlink" title="写入文件——文件输出"></a>写入文件——文件输出</h4><p>构造PrintWriter对象。如果文件不存在则创建该文件。<br><code>PrintWriter out = new PrintWriter(&quot;mynewfile.txt&quot;,&quot;UTF-8&quot;);</code></p>
+<h2 id="控制流程"><a href="#控制流程" class="headerlink" title="控制流程"></a>控制流程</h2><h3 id="块作用域"><a href="#块作用域" class="headerlink" title="块作用域"></a>块作用域</h3><p>块，即复合语句。是指由一对大括号括起来的若干条简单的Java语句。块确定了变量的作用域。一个块可以嵌套在另一个块中，不能在嵌套的两个块中声明同名的变量。</p>
+<h3 id="分支语句——条件语句"><a href="#分支语句——条件语句" class="headerlink" title="分支语句——条件语句"></a>分支语句——条件语句</h3><h4 id="if语句"><a href="#if语句" class="headerlink" title="if语句"></a>if语句</h4><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">if</span><span class="token punctuation">(</span>condition<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  statement1；
+  statement2；
+  <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+<span class="token punctuation">&#125;</span> <span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span>condition2<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  statement3<span class="token punctuation">;</span>
+  statement4<span class="token punctuation">;</span>
+  <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+<span class="token punctuation">&#125;</span> <span class="token keyword">else</span> <span class="token punctuation">&#123;</span>
+  statement5<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="switch语句"><a href="#switch语句" class="headerlink" title="switch语句"></a>switch语句</h4><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">switch</span> <span class="token punctuation">(</span>choice<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  <span class="token keyword">case</span> <span class="token number">1</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span>
+    statement1；
+    statement2；
+    <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+    <span class="token keyword">break</span><span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+  <span class="token keyword">case</span> <span class="token number">2</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span>
+    statement1；
+    statement2；
+    <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+    <span class="token keyword">break</span><span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+  <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+  <span class="token keyword">default</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span>
+    statement1；
+    statement2；
+    <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+    <span class="token keyword">break</span><span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>case标签可以是：</p>
 <ul>
 <li>类型为 char、byte、 short 或 int 的常量表达式。</li>
 <li>枚举常量。</li>
 <li>字符串字面量（如：”yes”）。<br>若是没有break语句，switch将从与选项值相匹配的case标签处开始执行直到遇到break语句或者switch语句执行结束。</li>
 </ul>
-<h2 id="循环语句"><a href="#循环语句" class="headerlink" title="循环语句"></a>循环语句</h2><p>循环意味着反复重复一段代码，直到满足跳出循环的条件。当使用break时，可以跳出一层循环，当使用continue时可以跳过该层循环的该次循环剩下的代码。</p>
-<h3 id="while-循环"><a href="#while-循环" class="headerlink" title="while 循环"></a>while 循环</h3><p>  while(condition) {<br>    statement1;<br>    statement2；<br>    …<br>  }</p>
-<h3 id="dowhile-循环"><a href="#dowhile-循环" class="headerlink" title="dowhile 循环"></a>dowhile 循环</h3><p>  do {<br>    statement1;<br>    statement2；<br>    …<br>  }while(condition);</p>
-<h3 id="for-循环"><a href="#for-循环" class="headerlink" title="for 循环"></a>for 循环</h3><p>  for (int i &#x3D; 0; i &lt; number; i++) {<br>    statement1;<br>    tatement2；<br>    …<br>  }</p>
-<h3 id="foreach循环"><a href="#foreach循环" class="headerlink" title="foreach循环"></a>foreach循环</h3><p>for each element in a,对a数组的每一个元素都进行一次该循环。<br>  for (emementType element: a) {<br>    statement1;<br>  }</p>
+<h3 id="循环语句"><a href="#循环语句" class="headerlink" title="循环语句"></a>循环语句</h3><p>循环意味着反复重复一段代码，直到满足跳出循环的条件。当使用break时，可以跳出一层循环，当使用continue时可以跳过该层循环的该次循环剩下的代码。</p>
+<h4 id="while-循环"><a href="#while-循环" class="headerlink" title="while 循环"></a>while 循环</h4><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">while</span><span class="token punctuation">(</span>condition<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  statement1<span class="token punctuation">;</span>
+  statement2；
+  <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="dowhile-循环"><a href="#dowhile-循环" class="headerlink" title="dowhile 循环"></a>dowhile 循环</h4><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">do</span> <span class="token punctuation">&#123;</span>
+  statement1<span class="token punctuation">;</span>
+  statement2；
+  <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+<span class="token punctuation">&#125;</span><span class="token keyword">while</span><span class="token punctuation">(</span>condition<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="for-循环"><a href="#for-循环" class="headerlink" title="for 循环"></a>for 循环</h4><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> number<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  statement1<span class="token punctuation">;</span>
+  tatement2；
+  <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="foreach循环"><a href="#foreach循环" class="headerlink" title="foreach循环"></a>foreach循环</h4><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">for</span> each element in a<span class="token punctuation">,</span>对a数组的每一个元素都进行一次该循环。
+  <span class="token keyword">for</span> <span class="token punctuation">(</span>emementType element<span class="token operator">:</span> a<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    statement1<span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
 
                 
             </div>
@@ -825,7 +944,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://dragon954.github.io" rel="external nofollow noreferrer">张俊耿</a>
+                    <a href="http://dragon954.github.io" rel="external nofollow noreferrer">dragon</a>
                 </span>
             </div>
             <div class="reprint__type">
@@ -848,7 +967,7 @@
                     本博客所有文章除特別声明外，均采用
                     <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY-NC-SA 4.0</a>
                     许可协议。转载请注明来源
-                    <a href="http://dragon954.github.io" target="_blank">张俊耿</a>
+                    <a href="http://dragon954.github.io" target="_blank">dragon</a>
                     !
                 </span>
             </div>
@@ -1039,6 +1158,9 @@
 <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/dragon954/dragon954.github.io/libs/codeBlock/codeBlockFuction.js"></script>
 
 
+  <!-- 是否加载使用自带的 prismjs. -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/dragon954/dragon954.github.io/libs/prism/prism.min.js"></script>
+
 
 <!-- 代码语言 -->
 
@@ -1143,6 +1265,16 @@
 
 
 
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+<!-- 代码语言 -->
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+<!-- 代码块复制 -->
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+<script type="text/javascript" src="/libs/codeBlock/clipboard.min.js"></script>
+<!-- 代码块收缩 -->
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script> 
+<!-- 代码块折行 -->
+<style type="text/css">code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }</style>
 
     <footer class="page-footer bg-color">
     
