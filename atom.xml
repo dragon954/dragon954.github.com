@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>人生博客</title>
   
-  
+  <subtitle>欢迎来到我的世界</subtitle>
   <link href="http://dragon954.github.io/atom.xml" rel="self"/>
   
   <link href="http://dragon954.github.io/"/>
