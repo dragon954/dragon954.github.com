@@ -6,7 +6,7 @@
   <link href="http://dragon954.github.io/atom.xml" rel="self"/>
   
   <link href="http://dragon954.github.io/"/>
-  <updated>2023-11-16T03:01:59.153Z</updated>
+  <updated>2023-12-04T05:16:14.301Z</updated>
   <id>http://dragon954.github.io/</id>
   
   <author>
@@ -15,6 +15,59 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>MySQLInstall</title>
+    <link href="http://dragon954.github.io/2023/12/04/MySQLInstall/"/>
+    <id>http://dragon954.github.io/2023/12/04/MySQLInstall/</id>
+    <published>2023-12-04T02:48:50.000Z</published>
+    <updated>2023-12-04T05:16:14.301Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="MySQL安装类型"><a href="#MySQL安装类型" class="headerlink" title="MySQL安装类型"></a>MySQL安装类型</h2><p>MySQL分为<strong>安装版</strong>和<strong>免安装版（绿色版本）</strong></p><h3 id="安装版"><a href="#安装版" class="headerlink" title="安装版"></a>安装版</h3><p>会自己配置好,意味着简单但比较呆板，可操作空间较小。</p><h3 id="zip版"><a href="#zip版" class="headerlink" title="zip版"></a>zip版</h3><p>自己选择解压路径后进行配置即可，自己写<strong>my.ini</strong>文件，并通过命令生成初始用户和数据库，比较灵活，需要配置环境变量。</p><h2 id="安装不同版本的MySQL"><a href="#安装不同版本的MySQL" class="headerlink" title="安装不同版本的MySQL"></a>安装不同版本的MySQL</h2><p>由于不同的需求，我需要在有MySQL5的基础上安装MySQL8，MySQL5是安装版，MySQL8是免安装版，遇到了一些问题，下面梳理下每一步的注意思路。</p><h3 id="先关闭第一个版本的MySQL服务"><a href="#先关闭第一个版本的MySQL服务" class="headerlink" title="先关闭第一个版本的MySQL服务"></a>先关闭第一个版本的MySQL服务</h3><p>不关可能会影响后面的初始化，操作如下：<br><strong>win</strong>+<strong>r</strong>,输入：services.msc开启服务窗口，找到MySQL服务名，选择停止。</p><h3 id="解压并新建my-ini文件"><a href="#解压并新建my-ini文件" class="headerlink" title="解压并新建my.ini文件"></a>解压并新建my.ini文件</h3><ul><li>解压zip文件到不含中文路径的文件夹，文件名应该是mysql-版本号-支持的操作系统，可改名，建议mysql-版本号</li><li>进入该文件夹（即为下文提到的MySQL安装目录），目录结构为bin、docs……（没有data文件夹）</li><li>在该文件夹新建my.ini文件，编辑如下内容：<pre class="line-numbers language-none"><code class="language-none">[mysqld]# 设置3306端口,由于已经被mysql5占用，因此改为3307port&#x3D;3307# 设置mysql的安装目录，为自己解压到的路径basedir&#x3D;D:\\software\mysql-8.0.32-winx64# 设置mysql数据库的数据的存放目录，data文件夹它会自行创建，不要自己手动创建datadir&#x3D; D:\\software\mysql-8.0.32-winx64\Data# 允许最大连接数max_connections&#x3D;200# 允许连接失败的次数。max_connect_errors&#x3D;10# 服务端使用的字符集默认为utf8mb4character-set-server&#x3D;utf8mb4# 创建新表时将使用的默认存储引擎default-storage-engine&#x3D;INNODB# 默认使用“mysql_native_password”插件认证#mysql_native_passworddefault_authentication_plugin&#x3D;mysql_native_password[mysql]# 设置mysql客户端默认字符集default-character-set&#x3D;utf8mb4[client]# 设置mysql客户端连接服务端时默认使用的3306端口，同第一点，设置为3307port&#x3D;3307default-character-set&#x3D;utf8mb4<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li></ul><h3 id="安装并初始化"><a href="#安装并初始化" class="headerlink" title="安装并初始化"></a>安装并初始化</h3><p>在管理员权限下的命令行界面，在bin目录进行操作：</p><ul><li>搜索cmd(命令行提示符)，右键，以管理员身份运行</li><li>输入以下命令<pre class="line-numbers language-none"><code class="language-none"># 进入D盘d:# 进入bin目录（MySQL安装目录修改为自己电脑的）cd D:\001Download\103_MySQL\mysql-8.0.22\bin# 安装，服务名设置为MySQL80是为了不和原版本默认的MySQL服务重名# --defaults-file是配置文件路径，根据这个配置文件内容进行安装mysqld install MySQL80 --defaults-file&#x3D;“D:\software\mysql-8.0.34\my.ini”# 初始化数据文件，生成data文件夹， -insecure会设置root账号无密码mysqld --initialize-insecure --user&#x3D;mysql<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li><li>该cmd窗口别关</li></ul><h3 id="启动服务并设置密码"><a href="#启动服务并设置密码" class="headerlink" title="启动服务并设置密码"></a>启动服务并设置密码</h3><p>可能是由于已经安装了一个MySQL服务，在第二个MySQL服务右键查看属性会发现可执行文件会默认为第一个安装版本的mysqld.exe文件，需要先进行修改  </p><ul><li><strong>win</strong>+<strong>r</strong>,输入：regedit，进入注册表窗口</li><li>进入以下路径寻找安装的服务的文件夹：计算机\HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services</li><li>在本文例子中会找到：计算机\HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\MySQL80</li><li>接着在ImagePath文件中修改可执行文件路径，改为MySQL安装目录中的bin文件夹里面的mysqld.exe文件</li><li>双击运行bin文件夹里面的mysqld.exe文件，可发现第二个MySQL服务的可执行文件路径已经更改成功</li><li>接着在安装时的cmd窗口继续进行以下操作<pre class="line-numbers language-none"><code class="language-none"># 启动服务net start MySQL80# 进入MySQL管理界面，由于有两个MySQL服务，需要选择端口号3307mysql -h127.0.0.1 -P3307 -uroot -p# 修改密码use mysql;ALTER user root@&#39;localhost&#39; identified by &#39;123456&#39;;# 刷新权限flush privileges;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li></ul><h2 id="删除MySQL"><a href="#删除MySQL" class="headerlink" title="删除MySQL"></a>删除MySQL</h2><p>由于各种各样的原因，需要删除MySQL服务，免安装版步骤如下</p><ul><li>停止服务（如MySQL80）</li><li>在cmd窗口执行命令：sc delete <strong>服务名(如MySQL80)</strong></li><li>在注册表窗口的该路径寻找服务：计算机\HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services</li><li>将这个文件删除：计算机\HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\<strong>服务名（如MySQL80）</strong></li><li>重启电脑，就会发现服务窗口中的服务（如MySQL80）已经被删除了，必须重启</li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;MySQL安装类型&quot;&gt;&lt;a href=&quot;#MySQL安装类型&quot; class=&quot;headerlink&quot; title=&quot;MySQL安装类型&quot;&gt;&lt;/a&gt;MySQL安装类型&lt;/h2&gt;&lt;p&gt;MySQL分为&lt;strong&gt;安装版&lt;/strong&gt;和&lt;strong&gt;免安装版（绿</summary>
+      
+    
+    
+    
+    <category term="MySQL" scheme="http://dragon954.github.io/categories/MySQL/"/>
+    
+    
+    <category term="MySQL" scheme="http://dragon954.github.io/tags/MySQL/"/>
+    
+    <category term="Install" scheme="http://dragon954.github.io/tags/Install/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ObjectsAndClasses</title>
+    <link href="http://dragon954.github.io/2023/11/16/ObjectsAndClasses/"/>
+    <id>http://dragon954.github.io/2023/11/16/ObjectsAndClasses/</id>
+    <published>2023-11-16T03:13:14.000Z</published>
+    <updated>2023-11-16T03:27:45.269Z</updated>
+    
+    <content type="html"><![CDATA[<span id="more"></span>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;span id=&quot;more&quot;&gt;&lt;/span&gt;
+</summary>
+      
+    
+    
+    
+    <category term="Java" scheme="http://dragon954.github.io/categories/Java/"/>
+    
+    
+    <category term="Java" scheme="http://dragon954.github.io/tags/Java/"/>
+    
+    <category term="Java核心技术卷I" scheme="http://dragon954.github.io/tags/Java%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF%E5%8D%B7I/"/>
+    
+  </entry>
   
   <entry>
     <title>Java的基本程序设计结构</title>
